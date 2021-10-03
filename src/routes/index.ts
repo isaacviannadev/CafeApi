@@ -3,14 +3,14 @@ import { Router } from 'express';
 const routes = Router();
 
 function verifyUserExists(req, res, next) {
-  const { user } = req.headers;
+  const { email, password } = req.headers;
 
   const admin = {
     email: 'studiocleofernandes@gmail.com',
     password: 'Cafe@2021',
   };
 
-  if (user !== admin) {
+  if (email !== admin.email || password !== admin.password) {
     return res
       .status(400)
       .json({ error: 'Dados não correspondem a um usuário válido.' });
@@ -21,7 +21,12 @@ function verifyUserExists(req, res, next) {
   return next();
 }
 
-routes.post('/admin', verifyUserExists, (req, res) => {
+routes.get('/admin', verifyUserExists, (req, res) => {
+  const { user } = req;
+
+  return res.json(user);
+});
+routes.post('/admin', (req, res) => {
   const { email, password } = req.body;
 
   const user = { email, password };
