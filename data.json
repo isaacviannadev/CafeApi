@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "nome": "Espresso",
+    "tamanho": 50,
+    "categoria": "cafe",
+    "grupo": "hotdrinks",
+    "preco": 8,
+    "descricao": null,
+    "sabores": null
+  },
+  {
+    "id": "2",
+    "nome": "Espresso Duplo",
+    "tamanho": 125,
+    "categoria": "cafe",
+    "grupo": "hotdrinks",
+    "preco": 10,
+    "descricao": null,
+    "sabores": null
+  },
+  {
+    "id": "3",
+    "nome": "Latte",
+    "tamanho": 125,
+    "categoria": "cafe",
+    "grupo": "hotdrinks",
+    "preco": 9,
+    "descricao": null,
+    "sabores": null
+  },
+  {
+    "id": "4",
+    "nome": "Capuccino",
+    "tamanho": 125,
+    "categoria": "cafe",
+    "grupo": "hotdrinks",
+    "preco": 9,
+    "descricao": null,
+    "sabores": null
+  }
+]
