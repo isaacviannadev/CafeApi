@@ -21,7 +21,7 @@ function verifyUserExists(req, res, next) {
   return next();
 }
 
-routes.post('/admin', (req, res) => {
+routes.post('/admin', verifyUserExists, (req, res) => {
   const { email, password } = req.body;
 
   const user = { email, password };
